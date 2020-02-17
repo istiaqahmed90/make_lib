@@ -1,2 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hellolibrary" />
+    package="com.example.hellolibrary">
+
+    <application>
+        <activity
+            android:name=".MainActivity"
+            android:label="MainActivity Lib"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

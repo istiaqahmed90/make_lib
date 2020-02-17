@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.hellolibrary.Hi;
@@ -27,8 +28,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Hi.showShortToast(MainActivity.this);
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
+
+                Intent intent = null;
+                try {
+                    String activityClassName = "com.example.hellolibrary.MainActivity";
+                    intent = new Intent(MainActivity.this,
+                            Class.forName(activityClassName));
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
